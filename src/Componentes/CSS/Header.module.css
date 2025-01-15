@@ -1,0 +1,36 @@
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.imag {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.breadcrumb {
+  display: flex;
+}
+.breadcrumbitem {
+  font-size: 16px;
+  color: #333;
+}
+
+.breadcrumblink {
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.breadcrumblink:hover {
+  color: #00bcd4;
+}

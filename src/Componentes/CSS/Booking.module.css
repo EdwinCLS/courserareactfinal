@@ -1,0 +1,32 @@
+.form {
+  display: grid;
+  padding: 2rem;
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background: linear-gradient(135deg, #ebecf0, #9aafd9);
+  border-radius: 10px;
+  margin-top: 100px; /* Ajuste de espacio superior para el formulario */
+  align-self: center; /* Esto lo mantiene centrado en el contenedor */
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.boton {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #f4ce14;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.cuerpo {
+  background-color: #d7ece3;
+}
