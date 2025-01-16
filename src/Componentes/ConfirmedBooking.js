@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ConfirmedBooking() {
+  const location = useLocation();
+  const formData = location.state?.formData;
+
   return (
     <div
       style={{
@@ -24,7 +27,7 @@ function ConfirmedBooking() {
           textShadow: "2px 2px 8px rgba(0, 0, 0, 0.2)",
         }}
       >
-        Booking Confirmed!
+        Booking Confirmed {formData.name}
       </h1>
       <h2
         style={{

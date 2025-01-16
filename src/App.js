@@ -34,7 +34,7 @@ function App() {
   const SubmitForm = (formData) => {
     const isSuccess = submitAPI(formData);
     if (isSuccess === true) {
-      navigate("/booking/confirmed");
+      navigate("/booking/confirmed", {state: {formData}});
     }
   };
   return (
