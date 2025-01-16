@@ -10,6 +10,7 @@ import herothree from "../imagenes/hero3.jpg";
 import chefs from "../imagenes/Mario and Adrian A.jpg";
 import chef from "../imagenes/restaurant chef B.jpg";
 import place from "../imagenes/restaurant.jpg";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardBody,
@@ -34,11 +35,16 @@ function Main() {
           <h1 className={styles.header}> Little Lemon</h1>
           <h2 className={styles.subheader}>Chicago</h2>
           <p className={styles.text}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
           </p>
-          <button className={styles.boton}>Reserve table</button>
+
+          <Link to="/BookingPage" className={styles.boton}>
+            Reserve table
+          </Link>
         </div>
         <img className={styles.imagen} src={food} alt="food" />{" "}
       </div>
@@ -71,7 +77,7 @@ function Main() {
             <Divider />
             <CardFooter>
               <ButtonGroup spacing="1">
-                <Button variant="solid" colorScheme="blue">
+                <Button className={styles.botonContenido}>
                   Order a delivery
                 </Button>
               </ButtonGroup>
@@ -95,7 +101,7 @@ function Main() {
             <Divider />
             <CardFooter>
               <ButtonGroup spacing="2">
-                <Button variant="solid" colorScheme="blue">
+                <Button className={styles.botonContenido}>
                   Order a delivery
                 </Button>
               </ButtonGroup>
@@ -118,21 +124,29 @@ function Main() {
             <Divider />
             <CardFooter>
               <ButtonGroup spacing="2">
-                <Button variant="solid" colorScheme="blue">
+                <Button className={styles.botonContenido}>
                   Order a delivery
                 </Button>
               </ButtonGroup>
             </CardFooter>
           </Card>
         </SimpleGrid>
-
+        <h1
+          style={{
+            fontSize: "1.6rem",
+            color: "black",
+            padding: ".5rem",
+            fontWeight: "bolder",
+          }}
+        >
+          Testimonials
+        </h1>
         <section className={styles.people}>
-          <h1>Testimonials</h1>
           <SimpleGrid
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
           >
-            <Card>
+            <Card className={styles.resena}>
               <CardHeader>
                 <Image
                   borderRadius="full"
@@ -158,7 +172,7 @@ function Main() {
                 <StarIcon color="yellow.400" w="20px" h="20px" />
               </CardFooter>
             </Card>
-            <Card>
+            <Card className={styles.resena}>
               <CardHeader>
                 <Image
                   borderRadius="full"
@@ -185,7 +199,7 @@ function Main() {
                 <StarIcon color="yellow.400" w="20px" h="20px" />
               </CardFooter>
             </Card>
-            <Card>
+            <Card className={styles.resena}>
               <CardHeader>
                 <Image
                   borderRadius="full"
@@ -197,11 +211,9 @@ function Main() {
               <CardBody>
                 <Text>
                   I have mixed feelings about this restaurant. The food was
-                  amazing! The chicken parmesan was one of the best I’ve ever
-                  had—crispy, tender, and covered in a rich tomato sauce. The
-                  garlic bread was the perfect side. However, the service was
-                  subpar. It took forever for our server to bring drinks and the
-                  main course, which was frustrating.
+                  amazing!The bruchetta was the perfect side. However, the
+                  service was subpar. It took forever for our server to bring
+                  drinks and the main course, which was frustrating.
                 </Text>
               </CardBody>
               <CardFooter>
@@ -213,11 +225,13 @@ function Main() {
             </Card>
           </SimpleGrid>
         </section>
-        <article className={styles.resena}>
+        <article className={styles.subpie}>
           <div>
-            <h1>Little Lemon</h1>
-            <h1>Chicago</h1>
-            <p>
+            <h1 className={styles.header}>Little Lemon</h1>
+            <h1 className={styles.subheader}>Chicago</h1>
+            <p
+              style={{ color: "black", textAlign: "left", fontSize: "1.2rem" }}
+            >
               Litlle lemon is a family restaurant. Every recipe is from grandma
               book.{" "}
             </p>

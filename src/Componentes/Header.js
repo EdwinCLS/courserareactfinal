@@ -19,7 +19,12 @@ function Header() {
             separator={<ChevronRightIcon color="gray.500" />}
           >
             <BreadcrumbItem className={styles.breadcrumbitem}>
-              <BreadcrumbLink className={styles.breadcrumblink} href="#">
+              <BreadcrumbLink
+                as={Link}
+                to="/"
+                className={styles.breadcrumblink}
+                href="#"
+              >
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>

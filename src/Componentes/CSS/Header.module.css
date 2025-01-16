@@ -34,3 +34,17 @@
 .breadcrumblink:hover {
   color: #00bcd4;
 }
+
+@media (max-width: 768px) {
+  .appHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 728px) {
+  .appHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+}
